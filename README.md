@@ -1,3 +1,7 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About libdrs_f
 ==============
 
@@ -18,8 +22,8 @@ display of smaller subsets of data.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libdrs_f-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libdrs_f-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/libdrs_f-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libdrs_f-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libdrs_f-feedstock-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libdrs_f-feedstock-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libdrs_f-feedstock-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libdrs_f-feedstock-feedstock)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
@@ -53,6 +57,8 @@ conda search libdrs_f --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -108,3 +114,10 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@dnadeau4](https://github.com/dnadeau4/)
+* [@doutriaux1](https://github.com/doutriaux1/)
+
