@@ -10,7 +10,7 @@ source:
   sha256: 90e10191116a78228739276078a0ddcf0d6458516f192e9e79fecb2beeceb3fa
 
 build:
-  number: 6
+  number: 7
   skip: True  # [win]
 
 requirements:
@@ -22,12 +22,12 @@ requirements:
     - g2clib
     - libcdms
     - libpng
-    - libnetcdf >=4.6.2,<4.6.3.0a0
+    - libnetcdf
   run:
     - g2clib
     - libcdms
     - libpng
-    - libnetcdf >=4.6.2,<4.6.3.0a0
+    - libnetcdf
 
 test:
   commands:
