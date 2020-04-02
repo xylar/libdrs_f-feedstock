@@ -3,7 +3,7 @@ About libdrs_f
 
 Home: http://cdat.llnl.gov
 
-Package license: BSD
+Package license: 3-Clause-BSD
 
 Feedstock license: BSD 3-Clause
 
