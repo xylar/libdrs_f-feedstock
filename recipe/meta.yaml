@@ -10,7 +10,7 @@ source:
   sha256: 90e10191116a78228739276078a0ddcf0d6458516f192e9e79fecb2beeceb3fa
 
 build:
-  number: 7
+  number: 8
   skip: True  # [win]
 
 requirements:
@@ -35,7 +35,7 @@ test:
 
 about:
   home:  http://cdat.llnl.gov
-  license: BSD
+  license: 3-Clause-BSD
   license_file: bsd-3-clause.txt
   summary: 'Data Retrieval and Storage DRS software Fortran library'
   description: |
