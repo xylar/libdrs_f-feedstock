@@ -1,14 +1,6 @@
 {% set name = "libdrs_f" %}
 {% set version = "3.1.2" %}
-{% set build = 9 %}
-
-# ensure mpi is defined (needed for conda-smithy recipe-lint)
-{% set mpi = mpi or 'nompi' %}
-
-{% if mpi == 'nompi' %}
-# prioritize nompi variant
-{% set build = build + 100 %}
-{% endif %}
+{% set build = 110 %}
 
 package:
   name: {{ name|lower }}
@@ -22,19 +14,6 @@ build:
   number: {{ build }}
   skip: True  # [win]
 
-  # add build string so packages can depend on
-  # mpi or nompi variants explicitly:
-  # `libdrs_f * mpi_mpich_*` for mpich
-  # `libdrs_f * mpi_*` for any mpi
-  # `libdrs_f * nompi_*` for no mpi
-
-  {% if mpi != 'nompi' %}
-  {% set mpi_prefix = "mpi_" + mpi %}
-  {% else %}
-  {% set mpi_prefix = "nompi" %}
-  {% endif %}
-  string: "{{ mpi_prefix }}_h{{ PKG_HASH }}_{{ build }}"
-
 requirements:
 
   build:
@@ -43,15 +22,14 @@ requirements:
   host:
     - g2clib
     - libcdms
-    - libcdms * {{ mpi_prefix }}_*
     - libpng
     - libnetcdf
-    - libnetcdf * {{ mpi_prefix }}_*
+    - libnetcdf * nompi_*
   run:
     - g2clib
-    - libcdms * {{ mpi_prefix }}_*
+    - libcdms
     - libpng
-    - libnetcdf * {{ mpi_prefix }}_*
+    - libnetcdf
 
 test:
   commands:
