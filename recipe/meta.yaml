@@ -1,6 +1,6 @@
 {% set name = "libdrs_f" %}
 {% set version = "3.1.2" %}
-{% set build = 110 %}
+{% set build = 111 %}
 
 package:
   name: {{ name|lower }}
