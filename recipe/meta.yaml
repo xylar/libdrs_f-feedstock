@@ -1,6 +1,6 @@
 {% set name = "libdrs_f" %}
 {% set version = "3.1.2" %}
-{% set build = 111 %}
+{% set build = 112 %}
 
 package:
   name: {{ name|lower }}
@@ -19,6 +19,7 @@ requirements:
   build:
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
+    - make
   host:
     - g2clib
     - libcdms
@@ -53,5 +54,4 @@ extra:
     - doutriaux1
     - downiec
     - jasonb5
-    - muryanto1
     - xylar

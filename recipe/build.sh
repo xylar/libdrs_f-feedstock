@@ -18,6 +18,10 @@ if [ `uname` == Linux ]; then
 else
     sed "s#@cdat_EXTERNALS@#${PREFIX}#g;" ${MAKEFILE}.in > ${MAKEFILE}
 fi
+if [[ "$target_platform" == "osx-arm64" ]]; then
+  # -lquadmath doesn't exist and isn't needed on OSX ARM
+  sed -i.bak "s#-lquadmath##g" ${MAKEFILE}
+fi
 make  -f ${MAKEFILE}
 make -f ${MAKEFILE} install
 # No make check or make test
